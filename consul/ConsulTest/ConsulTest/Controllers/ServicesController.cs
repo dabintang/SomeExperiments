@@ -15,7 +15,7 @@ namespace ConsulTest.Controllers
         /// <summary>
         /// 获取服务
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="name">服务名</param>
         /// <returns></returns>
         [HttpGet]
         [Route("FindService")]
@@ -23,7 +23,7 @@ namespace ConsulTest.Controllers
         {
             using (var consul = new ConsulClient(c =>
             {
-                c.Address = new Uri("http://172.81.235.6:8500/"); //Consul地址
+                c.Address = new Uri("http://120.79.229.45:8500/"); //Consul地址
             }))
             {
                 //获取服务

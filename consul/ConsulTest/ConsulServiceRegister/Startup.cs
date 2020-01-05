@@ -67,10 +67,10 @@ namespace ConsulServiceRegister
             //心跳检测设置
             var httpCheck = new AgentServiceCheck()
             {
-                DeregisterCriticalServiceAfter = TimeSpan.FromSeconds(15), //服务停止多久后注销
+                DeregisterCriticalServiceAfter = TimeSpan.FromSeconds(15), //心跳检测失败多久后注销
                 Interval = TimeSpan.FromSeconds(10), //间隔多久心跳检测一次
                 HTTP = $"http://{localIP}:{localPort}/api/Health/Check", //心跳检查地址，本服务提供的地址
-                Timeout = TimeSpan.FromSeconds(5)  //心跳检查超时时间
+                Timeout = TimeSpan.FromSeconds(5)  //心跳检测超时时间
             };
 
             //服务名（这里通过命令行参数传入不同的服务名，模拟我们有不同的服务[其实只是同一个接口项目的不同运行实例]）
