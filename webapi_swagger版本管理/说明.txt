@@ -1,0 +1,4 @@
+Swagger配合Web API进行版本控制
+NuGet安装：
+Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer
+Swashbuckle.AspNetCore
