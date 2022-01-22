@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SignalRService</name>
+    </assembly>
+    <members>
+        <member name="T:SignalRService.Controllers.BaseController">
+            <summary>
+            控制器基类
+            </summary>
+        </member>
+        <member name="T:SignalRService.Controllers.V1.AccountController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SignalRService.Controllers.V1.AccountController.Login(SignalRService.Controllers.V1.LoginReq)">
+            <summary>
+            登录
+            </summary>
+            <param name="req">条件</param>
+            <returns>token</returns>
+        </member>
+        <member name="T:SignalRService.Controllers.V1.LoginReq">
+            <summary>
+            密码登录条件
+            </summary>
+        </member>
+        <member name="P:SignalRService.Controllers.V1.LoginReq.UID">
+            <summary>
+            UID
+            </summary>
+        </member>
+        <member name="P:SignalRService.Controllers.V1.LoginReq.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="T:SignalRService.Hubs.AuthHub">
+            <summary>
+            有身份信息
+            </summary>
+        </member>
+        <member name="F:SignalRService.Hubs.AuthHub.dicUID_Conn">
+            <summary>
+            key：uid
+            value：ConnectionId
+            </summary>
+        </member>
+        <member name="M:SignalRService.Hubs.AuthHub.OnConnectedAsync">
+            <summary>
+            连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SignalRService.Hubs.AuthHub.OnDisconnectedAsync(System.Exception)">
+            <summary>
+            断开连接
+            </summary>
+            <param name="exception"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SignalRService.Hubs.AuthHub.SendToUID(System.String,System.String)">
+            <summary>
+            给指定uid发送消息
+            </summary>
+            <param name="uid"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SignalRService.Hubs.IServerTimeHub">
+            <summary>
+            服务器时间
+            </summary>
+        </member>
+        <member name="M:SignalRService.Hubs.IServerTimeHub.BroadcastTime(System.DateTime)">
+            <summary>
+            广播当前服务器时间
+            </summary>
+            <param name="time">时间</param>
+            <returns></returns>
+        </member>
+        <member name="T:SignalRService.Hubs.IServerTimeHubContext">
+            <summary>
+            服务器时间
+            </summary>
+        </member>
+        <member name="T:SignalRService.Hubs.SendMsgHub">
+            <summary>
+            发送消息
+            </summary>
+        </member>
+        <member name="M:SignalRService.Hubs.SendMsgHub.OnConnectedAsync">
+            <summary>
+            连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SignalRService.Hubs.SendMsgHub.OnDisconnectedAsync(System.Exception)">
+            <summary>
+            断开连接
+            </summary>
+            <param name="exception"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SignalRService.Hubs.SendMsgHub.SendToAll(System.String)">
+            <summary>
+            发送给所有人
+            </summary>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SignalRService.Hubs.SendMsgHub.SendToSelf(System.String)">
+            <summary>
+            发送给自己
+            </summary>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SignalRService.Hubs.SendMsgHub.SendToOthers(System.String)">
+            <summary>
+            发送给其他人
+            </summary>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SignalRService.Hubs.ServerTimeHub">
+            <summary>
+            服务器时间信息
+            </summary>
+        </member>
+        <member name="M:SignalRService.Hubs.ServerTimeHub.OnConnectedAsync">
+            <summary>
+            连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SignalRService.Hubs.ServerTimeHub.OnDisconnectedAsync(System.Exception)">
+            <summary>
+            断开连接
+            </summary>
+            <param name="exception"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SignalRService.Hubs.ServerTimeHub.BroadcastTime">
+            <summary>
+            广播当前服务器时间
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
